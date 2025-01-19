@@ -1,0 +1,185 @@
+body {
+    background-color: white;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between; /* Changed to flex-start to allow logo to touch left edge */
+gap: 20px;
+width: 100%;
+padding: 0; /* Removed padding to allow logo to touch edge */
+position: relative; /* Added for better positioning control */
+}
+
+.logo {
+width: 500px;
+height: 650px;
+border-top-left-radius: 0;
+border-top-right-radius: 800px;
+border-bottom-right-radius: 800px;
+border-bottom-left-radius: 0;
+background-color: #800000;
+display: flex;
+justify-content: center;
+align-items: center;
+overflow: hidden;
+position: relative; /* Changed positioning */
+margin: 0; /* Reset margin */
+}
+
+.logo img {
+    width: 70%;
+    height: auto;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 15%; /* Added right margin for content */
+    margin-left: 20px; /* Added left margin for spacing from logo */
+}
+
+.title h1 {
+    margin: 0;
+    font-size: 24px;
+    text-align: left;
+    color: black;
+}
+
+.title h2 {
+    margin: 5px 0 20px;
+    font-size: 16px;
+    color: black;
+}
+
+.button {
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    margin-bottom: 20px;
+    width: 75%;
+}
+
+.button:hover {
+    transform: scaleX(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #f0f0f0;
+}
+
+.button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #e0e0e0;
+}
+
+/* Responsiveness for smaller screens */
+@media (max-width: 768px) {
+    body {
+        background-image: url(aff68d2f-d777-43b3-b91b-7c68b81e8afd.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-color: #262525;
+        font-family: sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    .container {
+        flex-direction: column; /* Mengubah konten menjadi vertikal */
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .logo img {
+    width: 75%;
+    height: auto;
+}
+    .logo {
+        width: 200px; /* Sesuaikan ukuran logo */
+        height: 200px;
+        border-top-right-radius: 100px;
+        border-bottom-right-radius: 100px;
+        border-bottom:100px;
+        border-top: 100px;
+        border-top-left-radius: 100px;
+        border-bottom-left-radius: 100px;
+    }
+
+    .content {
+        align-items: center; /* Teks berada di tengah */
+        text-align: center;
+        width: 50%;
+        margin: 0 auto;
+        padding-top: 20px;
+        background-color: rgba(255, 255, 255, 0.62);
+    }
+
+    .title h1 {
+        font-size: 20px; /* Perkecil ukuran teks */
+        text-align: center;
+        color: #000000;
+      
+    }
+
+    .title h2 {
+        font-size: 14px;
+        color: #000000;
+       
+    }
+
+    .button {
+        font-size: 14px;
+        padding: 10px 20px; /* Sesuaikan padding tombol */
+    }
+}
+
+/* Responsiveness for very small screens */
+@media (max-width: 480px) {
+    .logo {
+        width: 200px; /* Sesuaikan ukuran logo */
+        height: 200px;
+        border-top-right-radius: 100px;
+        border-bottom-right-radius: 100px;
+        border-bottom:100px;
+        border-top: 100px;
+        border-top-left-radius: 100px;
+        border-bottom-left-radius: 100px;
+    }
+
+    .title h1 {
+        font-size: 18px;
+    }
+
+    .title h2 {
+        font-size: 12px;
+    }
+
+    .button {
+        font-size: 12px;
+        padding: 8px 16px; /* Lebih kecil lagi */
+    }
+}
